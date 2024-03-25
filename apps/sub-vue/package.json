@@ -1,0 +1,57 @@
+{
+  "name": "@apps/sub-vue",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:dev": "vue-tsc && vite build --mode development",
+    "build:prod": "vue-tsc && vite build",
+    "build:test": "vue-tsc && vite build --mode test",
+    "clean": "pnpm rimraf .turbo node_modules dist",
+    "dev": "vite",
+    "lint:eslint": "eslint --cache --max-warnings 0  \"src/**/*.{vue,ts,tsx}\" --fix",
+    "lint:prettier": "prettier --write src/**/*",
+    "lint:stylelint": "stylelint \"src/**/*.{vue,css,less,scss}\" --fix --cache --cache-location node_modules/.cache/stylelint/",
+    "preview": "vite preview"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.vue": [
+      "prettier --write",
+      "eslint --fix",
+      "stylelint --fix"
+    ],
+    "*.{scss,less,styl,html}": [
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@packages/hooks": "workspace:*",
+    "@packages/micro-app": "workspace:*",
+    "@packages/request": "workspace:*",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@configs/eslint-config": "workspace:*",
+    "@configs/prettier-config": "workspace:*",
+    "@configs/stylelint-config": "workspace:*",
+    "@configs/typescript-config": "workspace:*",
+    "@configs/vite-config": "workspace:*",
+    "unocss": "0.58.5",
+    "vite": "^5.2.4",
+    "vue-tsc": "^2.0.7"
+  }
+}
