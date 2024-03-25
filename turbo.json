@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "build:dev": {
+      "outputs": ["dist/**"]
+    },
+    "build:test": {
+      "outputs": ["dist/**"]
+    },
+    "build:prod": {
+      "outputs": ["dist/**"]
+    },
+    "stub": {
+      "cache": false
+    },
+    "lint:eslint": {},
+    "lint:prettier": {},
+    "lint:stylelint": {},
+    "clean": {
+      "cache": false
+    },
+    "preview": {}
+  }
+}

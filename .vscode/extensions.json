@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "mrmlnc.vscode-less",
+    "antfu.iconify",
+    "antfu.unocss",
+    "mikestead.dotenv"
+  ]
+}

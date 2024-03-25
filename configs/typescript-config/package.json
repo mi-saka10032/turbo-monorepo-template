@@ -1,0 +1,17 @@
+{
+  "name": "@configs/typescript-config",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "app.json",
+    "base.json",
+    "node.json",
+    "midway.json"
+  ],
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.30"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@packages/hooks",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "clean": "pnpm rimraf node_modules"
+  },
+  "dependencies": {
+    "vue": "^3.4.21",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66"
+  }
+}

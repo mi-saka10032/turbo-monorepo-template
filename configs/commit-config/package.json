@@ -1,0 +1,14 @@
+{
+  "name": "@configs/commit-config",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "index.cjs"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0"
+  }
+}

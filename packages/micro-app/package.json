@@ -1,0 +1,13 @@
+{
+  "name": "@packages/micro-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "clean": "pnpm rimraf node_modules"
+  },
+  "dependencies": {
+    "@micro-zoe/micro-app": "1.0.0-rc.4"
+  }
+}
