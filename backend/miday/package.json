@@ -1,0 +1,45 @@
+{
+  "name": "@backend/midway",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:dev": "mwtsc --cleanOutDir",
+    "build:test": "mwtsc --cleanOutDir",
+    "build:prod": "mwtsc --cleanOutDir",
+    "clean": "pnpm rimraf .turbo node_modules dist",
+    "cov": "cross-env c8 --all --reporter=text --reporter=lcovonly npm run test",
+    "dev": "cross-env NODE_ENV=local mwtsc --watch --run @midwayjs/mock/app",
+    "lint:eslint": "mwts fix",
+    "preview": "pnpm build:prod && cross-env NODE_ENV=production node ./bootstrap.js",
+    "test": "cross-env NODE_ENV=unittest mocha",
+    "ci": "npm run cov"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "mwts fix"
+    ]
+  },
+  "dependencies": {
+    "@midwayjs/bootstrap": "^3.12.0",
+    "@midwayjs/core": "^3.12.0",
+    "@midwayjs/cross-domain": "^3.15.6",
+    "@midwayjs/decorator": "^3.12.0",
+    "@midwayjs/info": "^3.12.0",
+    "@midwayjs/koa": "^3.12.0",
+    "@midwayjs/logger": "^3.1.0",
+    "@midwayjs/validate": "^3.12.0"
+  },
+  "devDependencies": {
+    "@configs/typescript-config": "workspace:*",
+    "@midwayjs/mock": "^3.12.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16",
+    "c8": "^8.0.1",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.2.0",
+    "mwts": "^1.3.0",
+    "mwtsc": "^1.4.0",
+    "ts-node": "^10.9.2"
+  }
+}
