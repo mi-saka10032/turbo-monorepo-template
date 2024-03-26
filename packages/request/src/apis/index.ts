@@ -1,4 +1,4 @@
-import { http } from "..";
+import { http } from "../..";
 
 const midwayGate = "http://localhost:7001";
 
