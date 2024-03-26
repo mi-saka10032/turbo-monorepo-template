@@ -1,6 +1,6 @@
 # Turbo Monorepo Template
 
-这是一份面向 monorepo 新手的 ts 全栈 template repo（简称 TMT），包含的功能有且不限于：
+这是一份面向 monorepo 新手的 ts 全栈 template repo（简称 TMT），包含的功能有：
 
 - 插拔式可扩展 tsconfig 预设规则
 - 插拔式可扩展 lint 预设规则（commitlint、eslint、prettier、stylelint）
@@ -31,7 +31,7 @@ pnpm install
 
 - [VS Code](https://code.visualstudio.com/)
 
-**注意：如果使用 VsCode 打开项目后发现 vue 文件出现 stylelint 相关的报错提示，属于当前版本 stylelint 插件对 vue 文件的识别 bug，请在当前工作区禁用 stylelint！**
+**注意：如果使用VsCode打开项目后发现vue文件出现stylelint相关的报错提示，属于当前版本 stylelint插件对vue文件的识别bug，请在当前工作区禁用VsCode的stylelint插件！**
 
 ### `🚀运行`
 
@@ -277,7 +277,7 @@ pnpm install
 
 ```vue
 <script setup lang="ts">
-import { useVueCount } from '@packages/hooks';
+import { useVueCount } from "@packages/hooks";
 
 const { add, count } = useVueCount();
 </script>
